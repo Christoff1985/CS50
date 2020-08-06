@@ -1,0 +1,68 @@
+h1 {
+    color: blue; 
+    text-align: center
+    }
+h2 {
+    color: green;
+}
+.division1 {
+    background-color: aqua;
+    width: 400px;
+    height: 80px;
+    padding: 10px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: 3px solid black 
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+td {
+    text-align: right;
+}
+.column1 {
+    text-align: left;
+}
+@media (min-width: 600px) {
+    body {
+        background-color:orange;
+    }
+}
+@media (max-width: 599px) {
+    body {
+        background-color: greenyellow;
+    }
+}
+#Container {
+    display: flex;
+    flex-wrap: wrap;
+}
+#Container > div{
+    background-color: springgreen;
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+    width: 200px;
+}
+#Grid{
+    background-color: green;
+    display: grid;
+    padding: 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    grid-template-columns: 200px 200px auto;
+}
+.grid-item {
+    background-color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center
+}
+.row > div {
+    padding: 20px;
+    background-color: teal;
+    border: 2px solid black;
+}
