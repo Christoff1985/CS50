@@ -3,10 +3,10 @@
     <head>
         <title>Search</title>
         <style>
-            .webpage_name {
-                font-size: 60px;
-                text-align: center;
-                margin: 10px
+            html {
+                height: 70vh;
+                width: 80vw;
+                position: relative;
             }
             #user_input {
                 width: 400px;
@@ -15,26 +15,35 @@
             .component {
                 text-align: center;
             }
-            .container {
-                min-height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+            #Grid {
+                display: grid;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50,-50);
+            }
+            .webpage_name {
+                font-size: 75px;
+                font-family: Arial;
+                text-align: center;
             }
         </style>
     </head>
     <body>
-        <div class="container">
+        <div id="Grid">
             <div class='webpage_name'>Google</div>
-            <form action="https://google.com/search">
-                <div class = "component">
-                    <input id="user_input" type="text" name="q">
-                </div>
-                <div class = "component">
-                    <input type="submit" value="Google Search">
-                    <input type="submit" value="I'm Feeling Lucky">
-                </div>
-            </form>
-        </div>
+            <div class="form">
+                <form action="https://google.com/search">
+                    <div class = "component">
+                        <input id="user_input" type="text" name="q">
+                    </div>
+                    <div class = "component">
+                        <input type="submit" value="Google Search">
+                        <input type="submit" value="I'm Feeling Lucky">
+                    </div>
+                </form>
+            </div>
+        <div>
     </body>
 </html>
