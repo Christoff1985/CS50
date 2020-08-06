@@ -2,11 +2,37 @@
 <html lang="en">
     <head>
         <title>Search</title>
+        <style>
+            .webpage_name {
+                font-size: 60px;
+                text-align: center;
+                margin: 10px
+            }
+            #user_input {
+                width: 400px;
+                margin: 10px
+            }
+            .component {
+                text-align: center;
+            }
+            .container {
+                height: 100%;
+                top: 50%;
+            }
+        </style>
     </head>
     <body>
-        <form action="https://google.com/search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
-        </form>
+        <div class="container">
+            <div class='webpage_name'>Google</div>
+            <form action="https://google.com/search">
+                <div class = "component">
+                    <input id="user_input" type="text" name="q">
+                </div>
+                <div class = "component">
+                    <input type="submit" value="Google Search">
+                    <input type="submit" value="I'm Feeling Lucky">
+                </div>
+            </form>
+        </div>
     </body>
 </html>
