@@ -9,8 +9,14 @@
                 position: relative;
             }
             #user_input {
-                width: 400px;
-                margin: 10px
+                width: 500px;
+                height: 20px;
+                border-color: lightgray;
+                border-style: solid;
+                border-width: thin;
+                border-radius: 20px;
+                margin: 20px;
+                padding: 10px;
             }
             .component {
                 text-align: center;
@@ -24,11 +30,21 @@
                 transform: translate(-50,-50);
             }
             .webpage_name {
-                font-size: 75px;
-                font-family: Arial; 
-                font-display: unset;
-                /* font-weight: 600; */
+                font-size: 100px;
+                font-family: 'Arial Narrow Bold', Helvetica, sans-serif; 
                 text-align: center;
+            }
+            #button {
+                height: 35px;
+                width: 120px;
+                border-color: white;
+                border-width: thin;
+                background-color: rgb(240, 240, 240);
+                color:rgb(109, 109, 109);
+                font-size: 14px;
+                font-family: Helvetica, sans-serif;
+                padding: 3px;  
+                margin: 3px;
             }
         </style>
     </head>
@@ -43,8 +59,8 @@
                         <input id="user_input" type="text" name="q">
                     </div>
                     <div class = "component">
-                        <input type="submit" value="Google Search">
-                        <input type="submit" value="I'm Feeling Lucky">
+                        <input id="button" type="submit" value="Google Search">
+                        <input id="button" type="submit" value="I'm Feeling Lucky">
                     </div>
                 </form>
             </div>
