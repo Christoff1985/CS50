@@ -4,7 +4,7 @@
         <title>Search</title>
         <style>
             html {
-                height: 70vh;
+                height: 65vh;
                 width: 80vw;
                 position: relative;
             }
@@ -14,9 +14,15 @@
                 border-color: lightgray;
                 border-style: solid;
                 border-width: thin;
-                border-radius: 20px;
+                border-radius: 22px;
                 margin: 20px;
-                padding: 10px;
+                padding: 12px;
+                font-size: 16px;
+                outline: none;
+                text-indent: 10px;
+            }
+            #user_input:hover {
+                box-shadow:0 0 11px rgb(138, 138, 138);
             }
             .component {
                 text-align: center;
@@ -46,17 +52,23 @@
                 padding: 3px;  
                 margin: 3px;
             }
+            .page_links {
+                text-align:right
+            }
         </style>
     </head>
     <body>
+        <div class="page_links">
+            <a href="image.html">Image Search</a>
+        </div>
         <div id="Grid">
-            <div class='webpage_name'>
+            <div class="webpage_name">
                 <span style="color: #4285f4">G</span><span style="color: #ea4335">o</span><span style="color: #fbbc05">o</span><span style="color: #4285f4">g</span><span style="color: #34a853">l</span><span style="color: #ea4335">e</span>
             </div>
             <div class="form">
                 <form action="https://google.com/search">
                     <div class = "component">
-                        <input id="user_input" type="text" name="q">
+                        <input id="user_input" type="text" placeholder = "Search Google or type a URL" name="q">
                     </div>
                     <div class = "component">
                         <input id="button" type="submit" value="Google Search">
