@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    height: 100vh;
+    height: 95vh;
     grid-template-columns: 300px auto 300px;
     /*grid-template-columns: repeat(3, 1fr);*/
     grid-template-rows: auto;
@@ -12,6 +12,8 @@
     align-content: center;
 }
 #col3 {
+    font-size: 14px;
+    gap: 4px;
     justify-self: end;
 }
 #webpage_name {
