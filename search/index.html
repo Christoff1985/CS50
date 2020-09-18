@@ -2,80 +2,29 @@
 <html lang="en">
     <head>
         <title>Search</title>
-        <style>
-            html {
-                height: 65vh;
-                width: 80vw;
-                position: relative;
-            }
-            #user_input {
-                width: 500px;
-                height: 20px;
-                border-color: lightgray;
-                border-style: solid;
-                border-width: thin;
-                border-radius: 22px;
-                margin: 20px;
-                padding: 12px;
-                font-size: 16px;
-                outline: none;
-                text-indent: 10px;
-            }
-            #user_input:hover {
-                box-shadow:0 0 11px rgb(138, 138, 138);
-            }
-            .component {
-                text-align: center;
-            }
-            #Grid {
-                display: grid;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-right: -50%;
-                transform: translate(-50,-50);
-            }
-            .webpage_name {
-                font-size: 100px;
-                font-family: 'Arial Narrow Bold', Helvetica, sans-serif; 
-                text-align: center;
-            }
-            #button {
-                height: 35px;
-                width: 120px;
-                border-color: white;
-                border-width: thin;
-                background-color: rgb(240, 240, 240);
-                color:rgb(109, 109, 109);
-                font-size: 14px;
-                font-family: Helvetica, sans-serif;
-                padding: 3px;  
-                margin: 3px;
-            }
-            .page_links {
-                text-align:right
-            }
-        </style>
+        <link rel = "stylesheet" href="style.css">
     </head>
     <body>
-        <div class="page_links">
-            <a href="image.html">Image Search</a>
-        </div>
-        <div id="Grid">
-            <div class="webpage_name">
-                <span style="color: #4285f4">G</span><span style="color: #ea4335">o</span><span style="color: #fbbc05">o</span><span style="color: #4285f4">g</span><span style="color: #34a853">l</span><span style="color: #ea4335">e</span>
-            </div>
-            <div class="form">
+        <div class = "container">
+            <div></div>
+            <div id = "col2">
+                <div id="webpage_name">
+                    <span style="color: #4285f4">G</span><span style="color: #ea4335">o</span><span style="color: #fbbc05">o</span><span style="color: #4285f4">g</span><span style="color: #34a853">l</span><span style="color: #ea4335">e</span>
+                </div>
                 <form action="https://google.com/search">
-                    <div class = "component">
+                    <div style="text-align: center;">
                         <input id="user_input" type="text" placeholder = "Search Google or type a URL" name="q">
                     </div>
-                    <div class = "component">
+                    <div style="text-align: center;">
                         <input id="button" type="submit" value="Google Search">
                         <input id="button" type="submit" value="I'm Feeling Lucky">
                     </div>
                 </form>
             </div>
-        <div>
+            <div id = "col3">
+                <a href="image.html">Image Search</a>
+                <a href="advanced.html">Advanced Search</a>
+            </div>
+        </div>
     </body>
 </html>
