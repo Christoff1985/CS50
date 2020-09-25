@@ -14,7 +14,6 @@
 }
 #col3 {
     font-size: 14px;
-    /*gap: 4px;*/
     justify-self: end;
 }
 #webpage_name {
@@ -22,21 +21,32 @@
     font-family: 'Arial Narrow Bold', Helvetica, sans-serif; 
     text-align: center;
 }
-#user_input {
+#user_input_box {
     width: 500px;
-    height: 20px;
+    height: 35px;
+    display: grid;
+    grid-template-columns: 45px auto;
     border-color: lightgray;
     border-style: solid;
     border-width: thin;
     border-radius: 22px;
-    margin: 20px;
-    padding: 12px;
-    font-size: 16px;
-    outline: none;
-    text-indent: 10px;
+    margin: 10px;
+    padding: 5px;
 }
-#user_input:hover {
+#user_input_box:hover {
     box-shadow:0 0 11px rgb(138, 138, 138);
+}
+#user_input_img {
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 22px 0px 0px 22px;
+}
+#user_input_text {
+    font-size: 16px;
+    border-color: transparent;
+    border-radius: 0px 22px 22px 0px;
+    cursor: pointer;
+    outline: none;
 }
 #button {
     height: 35px;
@@ -49,4 +59,5 @@
     font-family: Helvetica, sans-serif;
     padding: 3px;  
     margin: 3px;
+    outline: none;
 }
