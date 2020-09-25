@@ -17,9 +17,7 @@
     justify-self: end;
 }
 #webpage_name {
-    font-size: 100px;
-    font-family: 'Arial Narrow Bold', Helvetica, sans-serif; 
-    text-align: center;
+    justify-self: center;
 }
 #user_input_box {
     width: 500px;
