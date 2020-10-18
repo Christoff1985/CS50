@@ -18,7 +18,7 @@
                 text-align: right;
             }
             .banner2 {
-                padding-left: 50px;
+                padding-left: 40px;
                 padding-top: 20px;
                 padding-bottom: 20px;
                 font-size: 20px;
@@ -29,31 +29,34 @@
             .GridItem1 {
                 margin-bottom: 10px;
                 font-size: 20px;    
-                grid-area: myHeader;
             }
-            .GridItem2 {grid-area: myLabel;}
-            .GridItem3 {grid-area: myInput;}
-            .GridItem4 {grid-area: myTxtHeader;}
-            .Griditem5 {grid-area: myTxt;}
-            .lblItem {
+            .GridItem2 {
+                font-weight: bold;
+            }
+            .GridItem3 {
+                font-size: 14px;
+            }
+            .GridItem4 {
+                border-color: lightgrey;
+                border-width: thin;
+                border-radius: 0;
+                box-shadow: none;
+                height: 23px;
+                width: 570px;
+            }
+            .GridItem4:focus {
+                border-width: 1px;
+                border-color: blue;
+            }
+            .GridItem5 {
                 font-size: 12px;
-                margin-bottom: 5px;
-            }
-            .iptItem {
-                margin-bottom: 5px;
             }
             #page {
                 margin: 40px;
                 display: grid;
-                width: 50%;
-                grid-template-columns: auto 400px auto;
-                grid-template-rows: 40px;
-                grid-template-areas: 
-                    "myHeader  myHeader myTxtHeader"
-                    "myLabel  myInput myTxt"
-                    "myLabel  myInput myTxt"
-                    "myLabel  myInput myTxt"
-                    "myLabel  myInput myTxt";
+                width: 100%;
+                grid-template-columns: 180px 600px auto;
+                grid-template-rows: repeat(5,40px);
             }
         </style>
     </head>
@@ -64,30 +67,25 @@
             </div>
             <div class = "banner2">Advanced Search</div>
             <div>
-                <form action="https://google.com/search"></form>
+                <form action="https://google.com/search">
                     <div id="page">
-                        <div class = "GridItem1"><label >Find pages with ...</label></div>
-                        <div class = "GridItem2">
-                            <label class= "lblItem">all these words:</label><br>
-                            <label class= "lblItem">this exact word or phrase:</label><br>
-                            <label class= "lblItem">any of these words:</label><br>
-                            <label class= "lblItem">none of these words:</label>
-                        </div>
-                        <div class = "GridItem3">
-                            <input class= "iptItem" type="text" name=q><br>
-                            <input class= "iptItem" type="text" name=q><br>
-                            <input class= "iptItem" type="text" name=q><br>
-                            <input class= "iptItem" type="text" name=q>
-                        </div>
-                        <div class = "GridItem4">
-                            <label >To do this in the search box</label>
-                        </div>
-                        <div class = "GridItem5">
-                            <label>Type important words: tri-colour rat terrier</label><br>
-                            <label>Put exact words in quotes: "rat terrier"</label><br>
-                            <label>Type OR between all the words you want: miniature OR standard</label><br>
-                            <label>Put a minus sign before words that you don't want: -rodent, -"Jack Russell"</label>
-                        </div>
+                        <div class="GridItem1"><label>Find pages with ...</label></div>
+                        <div></div>
+                        <div class="GridItem2"><label>To do this in the search box</label></div>
+                        <div class="GridItem3"><label>all these words:</label></div>
+                        <div><input class="GridItem4" type="text" name=q autofocus = true></div>
+                        <div class="GridItem5"><label>Type important words: tri-colour rat terrier</label></div>
+                        <div class="GridItem3"><label>this exact word or phrase:</label></div>
+                        <div><input class="GridItem4" type="text" name=q ></div>
+                        <div class="GridItem5"><label>Put exact words in quotes: "rat terrier"</label></div>
+                        <div class="GridItem3"><label>any of these words:</label></div>
+                        <div><input class="GridItem4" type="text" name=q ></div>
+                        <div class="GridItem5"><label>Type OR between all the words you want: miniature OR standard</label></div>
+                        <div class="GridItem3"><label>none of these words:</label></div>
+                        <div><input class="GridItem4" type="text" name=q ></div>
+                        <div class="GridItem5">
+                            <label>Put a minus sign before words that you don't want:</label><br>
+                            <label>-rodent, -"Jack Russell"</label></div>
                     </div>
                 </form>
             </div>
