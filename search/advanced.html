@@ -2,14 +2,94 @@
 <html lang="en">
     <head>
         <title>Advanced Search</title>
-        <link rel = "stylesheet" href="style.css">
+        <style>
+            .container {
+                width: 99vw;
+                display: grid;
+                grid-template-rows: 60px 60px auto;
+                grid-auto-flow: row;
+                gap: 4px;
+            }
+            .banner1 {
+                background-image: url('Google_Logo_Advanced.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-size: 14px;
+                text-align: right;
+            }
+            .banner2 {
+                padding-left: 50px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgb(196, 20, 20);
+                border-bottom: 1px solid rgb(240,240,240);
+            }   
+            .GridItem1 {
+                margin-bottom: 10px;
+                font-size: 20px;    
+                grid-area: myHeader;
+            }
+            .GridItem2 {grid-area: myLabel;}
+            .GridItem3 {grid-area: myInput;}
+            .GridItem4 {grid-area: myTxtHeader;}
+            .Griditem5 {grid-area: myTxt;}
+            .lblItem {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+            .iptItem {
+                margin-bottom: 5px;
+            }
+            #page {
+                margin: 40px;
+                display: grid;
+                width: 50%;
+                grid-template-columns: auto 400px auto;
+                grid-template-rows: 40px;
+                grid-template-areas: 
+                    "myHeader  myHeader myTxtHeader"
+                    "myLabel  myInput myTxt"
+                    "myLabel  myInput myTxt"
+                    "myLabel  myInput myTxt"
+                    "myLabel  myInput myTxt";
+            }
+        </style>
     </head>
     <body>
         <div class = "container">
-            <div></div>
-            <div id = "col2"></div>
-            <div id = "col3">
+            <div class = "banner1">
                 <a href="index.html">Google Search</a>
+            </div>
+            <div class = "banner2">Advanced Search</div>
+            <div>
+                <form action="https://google.com/search"></form>
+                    <div id="page">
+                        <div class = "GridItem1"><label >Find pages with ...</label></div>
+                        <div class = "GridItem2">
+                            <label class= "lblItem">all these words:</label><br>
+                            <label class= "lblItem">this exact word or phrase:</label><br>
+                            <label class= "lblItem">any of these words:</label><br>
+                            <label class= "lblItem">none of these words:</label>
+                        </div>
+                        <div class = "GridItem3">
+                            <input class= "iptItem" type="text" name=q><br>
+                            <input class= "iptItem" type="text" name=q><br>
+                            <input class= "iptItem" type="text" name=q><br>
+                            <input class= "iptItem" type="text" name=q>
+                        </div>
+                        <div class = "GridItem4">
+                            <label >To do this in the search box</label>
+                        </div>
+                        <div class = "GridItem5">
+                            <label>Type important words: tri-colour rat terrier</label><br>
+                            <label>Put exact words in quotes: "rat terrier"</label><br>
+                            <label>Type OR between all the words you want: miniature OR standard</label><br>
+                            <label>Put a minus sign before words that you don't want: -rodent, -"Jack Russell"</label>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </body>
