@@ -41,11 +41,15 @@
                 border-width: thin;
                 border-radius: 0;
                 box-shadow: none;
-                height: 23px;
+                height: 25px;
                 width: 570px;
             }
             .GridItem4:focus {
-                border-width: 1px;
+                box-shadow: inset 0 0 5px lightgrey;
+                outline: none;
+                border-width: thin;
+                border-style: solid;
+                border-radius: -1;
                 border-color: blue;
             }
             .GridItem5 {
@@ -67,9 +71,9 @@
             </div>
             <div class = "banner2">Advanced Search</div>
             <div>
-                <form action="https://google.com/search">
+                <form autocomplete = "off" action="https://google.com/search"> <!-- autocomplete = switches the dropdown on/off as well as removing the pale blue background even when element loses focus--> 
                     <div id="page">
-                        <div class="GridItem1"><label>Find pages with ...</label></div>
+                        <div class="GridItem1"><label>Find pages with ...</label></div> 
                         <div></div>
                         <div class="GridItem2"><label>To do this in the search box</label></div>
                         <div class="GridItem3"><label>all these words:</label></div>
