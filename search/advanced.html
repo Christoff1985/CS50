@@ -28,13 +28,17 @@
             }   
             .GridItem1 {
                 margin-bottom: 10px;
-                font-size: 20px;    
+                font-size: 16px;    
+                font-family: Arial, Helvetica, sans-serif;
             }
             .GridItem2 {
                 font-weight: bold;
+                font-size: 12px; 
+                font-family: Arial, Helvetica, sans-serif;
             }
             .GridItem3 {
-                font-size: 14px;
+                font-size: 12px;
+                font-family: Arial, Helvetica, sans-serif;
             }
             .GridItem4 {
                 border-color: lightgrey;
@@ -42,7 +46,7 @@
                 border-radius: 0;
                 box-shadow: none;
                 height: 25px;
-                width: 570px;
+                width: 100%;
             }
             .GridItem4:focus {
                 box-shadow: inset 0 0 5px lightgrey;
@@ -50,17 +54,35 @@
                 border-width: thin;
                 border-style: solid;
                 border-radius: -1;
-                border-color: blue;
+                border-color:  rgb(48, 140, 226);
             }
             .GridItem5 {
-                font-size: 12px;
+                font-size: 11px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .GridItem6 {
+                justify-self: right;
+            }
+            #Button {
+                height: 30px;
+                width: 130px;
+                outline: none;
+                border-width: thin; 
+                border-radius: 3px;
+                border-color:rgb(48, 140, 226);
+                background-color: rgb(48, 140, 226);
+                color: white;
+                font-weight: bold;
+                font-size: 11px;
+                font-family: Arial, Helvetica, sans-serif;
+                box-shadow: none;
             }
             #page {
                 margin: 40px;
                 display: grid;
-                width: 100%;
                 grid-template-columns: 180px 600px auto;
-                grid-template-rows: repeat(5,40px);
+                grid-template-rows: repeat(6,40px);
+                column-gap: 20px;
             }
         </style>
     </head>
@@ -90,6 +112,10 @@
                         <div class="GridItem5">
                             <label>Put a minus sign before words that you don't want:</label><br>
                             <label>-rodent, -"Jack Russell"</label></div>
+                        <div></div>
+                        <div class="GridItem6">
+                            <button id="Button">Advanced Search</button>
+                        </div>
                     </div>
                 </form>
             </div>
