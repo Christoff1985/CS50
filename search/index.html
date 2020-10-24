@@ -2,29 +2,108 @@
 <html lang="en">
     <head>
         <title>Search</title>
-        <link rel = "stylesheet" href="style.css">
+        <!--<link rel = "stylesheet" href="style_general.css">-->
+        <style>
+            .container {
+                display: grid;                          /*Make the container of type grid*/
+                height: 95vh;                           /*The height of this grid is set to 95% of the viewheight*/
+                grid-template-columns: repeat(3, 1fr);  /*Within this grid, create 3 columns each of equal size - i.e. equal to 1fr of free space of the containers' width*/
+            }
+            .container > .col2 {                        /*Refers to the col2 class which is a direct child element of the container element*/
+                justify-self: center;                   /*Horizontally center all content within the parent column element*/
+                align-self: center ;                    /*Vertically center all content within the parent column element*/
+            }
+            .container > .col3 {                        /*Refers to the col3 class which is a direct child element of the container element*/
+                font-size: 14px;
+                justify-self: end;                      /*Right aligns content within the parent column element*/
+            }
+            #page {
+                display: grid;                          /*Create another grid with col2 of the container*/
+                grid-template-columns: 500px;            /*Create 1 column within this grid of variable size*/
+                grid-template-rows: 120px 50px 50px;
+            }           
+            .item-a, .item-c {
+                justify-self: center;
+                align-self: center;
+            }
+            .control {
+                position: relative;
+                height: 80%;
+                margin: 0;
+            }
+            .control > #ipttxt {
+                height: 100%;
+                width: 100%;
+                
+                padding: 5px;
+                padding-left: 8%;
+                box-sizing: border-box;
+
+                border-color: lightgray;
+                border-style: solid;
+                border-width: thin;
+                border-radius: 22px;
+
+                font-size: 16px;
+                cursor: pointer;
+                outline: none;
+            }
+            .control > #ipttxt ~ #icon {
+                background-image: url("search_pic.png");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center center;
+                border-radius: 22px 0px 0px 22px;
+                width: 35px;
+                height: 95%;
+                position: absolute;
+                left: 2px;
+                bottom: 0;
+                top: 0;
+                margin: auto;
+            }
+            /* Change autocomplete styles in WebKit */
+            .control > #ipttxt:-webkit-autofill, #ipttxt:-webkit-autofill:focus {
+                -webkit-box-shadow: 0 0 0px 1000px white inset;
+                border-radius: 22px 22px 0px 0px;
+            }
+            .control > #ipttxt:hover {
+                box-shadow:0 0 11px rgb(138, 138, 138);
+            }
+            #button {
+                height: 35px;
+                width: 120px;
+                border-color: white;
+                border-width: thin;
+                background-color: rgb(240, 240, 240);
+                color:rgb(109, 109, 109);
+                font-size: 14px;
+                font-family: Helvetica, sans-serif;
+                outline: none;
+        }           
+        </style>
     </head>
     <body>
-        <div class = "container">
+        <div class="container">
             <div></div>
-            <div id = "col2">
-                <div id="webpage_name">
-                    <img src="google_logo.png">
-                    <!--<span style="color: #4285f4">G</span><span style="color: #ea4335">o</span><span style="color: #fbbc05">o</span><span style="color: #4285f4">g</span><span style="color: #34a853">l</span><span style="color: #ea4335">e</span>-->
-                </div>
+            <div class="col2">
                 <form action="https://google.com/search">
-                    <div id="user_input_box">
-                        <img id="user_input_img" src="search_pic.png" width="35" height="35">
-                        <input id="user_input_text" type="text" placeholder = "Search Google or type a URL" name="q">
-                    </div>
-                    <div style="text-align: center;">
-                        <input id="button" type="submit" value="Google Search">
-                        <input id="button" type="submit" value="I'm Feeling Lucky">
+                    <div id="page">
+                        <div class="item-a"><img src="google_logo.png"></div>
+                        <div class="item-b">
+                            <p class="control">
+                                <input id="ipttxt" type="text" placeholder = "Search Google or type a URL" name="q"/>
+                                <span id="icon"></span>
+                            </p>
+                        </div><div class="item-c">
+                            <input id="button" type="submit" value="Google Search">
+                            <input id="button" type="submit" value="I'm Feeling Lucky">
+                        </div>
                     </div>
                 </form>
             </div>
-            <div id = "col3">
-                <a href="image.html">Image Search</a>&nbsp
+            <div class = "col3">
+                <a href="image.html">Image Search</a>&nbsp <!--nbsp = non-breaking space-->
                 <a href="advanced.html">Advanced Search</a>
             </div>
         </div>

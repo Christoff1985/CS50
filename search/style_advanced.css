@@ -1,0 +1,84 @@
+.container {
+    width: 99vw;
+    display: grid;
+    grid-template-rows: 60px 60px auto;
+    grid-auto-flow: row;
+    gap: 4px;
+}
+.banner1 {
+    background-image: url('Google_Logo_Advanced.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 14px;
+    text-align: right;
+}
+.banner2 {
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(196, 20, 20);
+    border-bottom: 1px solid rgb(240,240,240);
+}   
+.GridItem1 {
+    margin-bottom: 10px;
+    font-size: 16px;    
+    font-family: Arial, Helvetica, sans-serif;
+}
+.GridItem2 {
+    font-weight: bold;
+    font-size: 12px; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+.GridItem3 {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.GridItem4 {
+    border-color: lightgrey;
+    border-width: thin;
+    border-radius: 0;
+    border-style: solid;
+    border-color: rgb(190, 190, 190);
+    height: 70%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.GridItem4:focus {
+    box-shadow: inset -2px 2px 2px lightgrey;
+    outline: none;
+    border-width: thin;
+    border-style: solid;                                /*Specifying the style is NB for all the border attributes to take affect*/
+    border-radius: 0;
+    border-color:  rgb(72, 154, 231);
+}
+.GridItem5 {
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.GridItem6 {
+    justify-self: right;
+}
+#Button {
+    height: 30px;
+    width: 130px;
+    outline: none;
+    border-width: thin; 
+    border-radius: 3px;
+    border-style: solid;
+    border-color:rgb(72, 154, 231);
+    background-color: rgb(72, 154, 231);
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: none;
+}
+#page {
+    margin: 40px;
+    display: grid;
+    grid-template-columns: 180px 600px auto;
+    grid-template-rows: repeat(6,40px);
+    column-gap: 20px;
+}
