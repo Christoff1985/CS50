@@ -2,29 +2,26 @@
 <html lang="en">
     <head>
         <title>Image Search</title>
-        <link rel = "stylesheet" href="style.css">
+        <link rel = "stylesheet" href="style_general.css">
     </head>
     <body>
         <div class = "container">
             <div></div>
-            <div id = "col2">
-                <div id="webpage_name">
-                    <img src="Google_Logo_Image.png">
-                    <!--<span style="color: #4285f4">G</span><span style="color: #ea4335">o</span><span style="color: #fbbc05">o</span><span style="color: #4285f4">g</span><span style="color: #34a853">l</span><span style="color: #ea4335">e</span>-->
-                </div>
+            <div class="col2">
                 <form action="https://google.com/search">
-                    <div id="user_input_box">
-                        <img id="user_input_img" src="search_pic.png" width="35" height="35">
-                        <input id="user_input_text" type="text" placeholder = "Search Google or type a URL" name="q">
-                        <input type="hidden" value="isch" name = "tbm">
-                    </div>
-                    <div style="text-align: center;">
-                        <input id="button" type="submit" value="Google Search">
-                        <input id="button" type="submit" value="I'm Feeling Lucky">
+                    <div id="page">
+                        <div class="item-a"><img src="Google_Logo_Image.png"></div>
+                        <div class="item-b">
+                            <p class="control">
+                                <input id="ipttxt" type="text" placeholder = "Search Google or type a URL" name="q"/>
+                                <input type="hidden" value="isch" name = "tbm">
+                                <span id="icon"></span>
+                            </p>
+                        </div>
                     </div>
                 </form>
             </div>
-            <div id = "col3">
+            <div class = "col3">
                 <a href="index.html">Google Search</a>
             </div>
         </div>
